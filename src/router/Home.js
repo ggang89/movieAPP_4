@@ -13,6 +13,7 @@ export default function Home() {
     setLoading(false);
     setMovies(json.data.movies);
     console.log(json);
+    
   };
   useEffect(() => {
     getMovies();
@@ -29,6 +30,7 @@ export default function Home() {
             {movies.map((m) => (
               <Movie
                 key={m.id}
+                id={m.id}
                 title={m.title}
                 rating={m.rating}
                 runtime={m.runtime}

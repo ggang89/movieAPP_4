@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-export default function Movie({img,title,rating,runtime,genres }) {
+export default function Movie({id,img,title,rating,runtime,genres }) {
   
   return (
     <div className="movieBox">
       <img src={img} alt={title}></img>
       <h2>
-        <Link to={""}>{title}</Link>
+        <Link to={`movie/${id}`}>{title}</Link>
       </h2>
       <p>rating:{rating}</p>
       <p>runtime: {runtime}</p>
