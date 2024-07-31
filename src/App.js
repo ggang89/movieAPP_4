@@ -6,13 +6,14 @@ import Detail from "./router/Detail";
 function App() {
   return (
     <BrowserRouter>
-      <NavLink>
+      <NavLink to="/">
         <h4>Home</h4>
       </NavLink>
 
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="" element={<Detail />}></Route>
+        <Route path="/" element={<Home />}/>
+        <Route path="/datail/:movie_Id" element={<Detail />}/>
+        <Route path="*" element={ <h1> Not Found Page...👻</h1>} />
       </Routes>
     </BrowserRouter>
   );
