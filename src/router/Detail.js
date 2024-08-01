@@ -22,15 +22,20 @@ export default function Detail() {
       {loading ? (
         <h1>...Loading...⏳</h1>
       ) : (
-        <>
-            <img src={movie.large_cover_image } alt={movie.title}></img>
+        <div className="movie">
+          <img src={movie.large_cover_image} alt={movie.title}></img>
+          <div className="movieText">
             <h1>Title: {movie.title}</h1>
             <p>rating: {movie.rating} / 10.0 </p>
             <p>runtime: {movie.runtime}/min</p>
-            <ul>genres:{movie.genres.map(g => (<li>{g}</li>)) }</ul>
-
-            
-        </>
+            <ul>
+              genres:
+              {movie.genres.map((g) => (
+                <li>{g}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       )}
     </>
   );

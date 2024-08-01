@@ -20,13 +20,14 @@ export default function Home() {
   }, []);
 
   return (
-    <div>
-      <>
-        {loading ? (
-          <h1>Loading....🐧🐧🐧</h1>
-        ) : (
-          <>
-            <h1>Movie App_4 🎥</h1>
+    <div className="wrap">
+      {loading ? (
+        <h1>Loading....🐧🐧🐧</h1>
+      ) : (
+        <>
+            <h1 className="title">Movie App_4 🎥</h1>
+          
+          <div className="content">
             {movies.map((m) => (
               <Movie
                 key={m.id}
@@ -38,9 +39,9 @@ export default function Home() {
                 img={m.medium_cover_image}
               />
             ))}
-          </>
-        )}
-      </>
+          </div>
+        </>
+      )}
     </div>
   );
 }
